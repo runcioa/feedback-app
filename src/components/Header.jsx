@@ -3,11 +3,11 @@
 // Utilizzare l'emmet rfce
 
 
-function Header(props) {
+function Header({text}) {
   return (
   <header>
       <div className="container">
-          <h2>Feedback UI {props.text}</h2>
+          <h2>Feedback UI {text}</h2>
       </div>
   </header>);
 }
