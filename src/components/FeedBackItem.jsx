@@ -10,7 +10,10 @@ function FeedBackItem() {
 
     const handleClick = () =>{
         // Imposto il valore con la funzione
-        setRating('10');
+        // Accedo al valore precedente con prev
+        setRating((prev)=>{
+            return prev + 1;
+        });
     }
 
 
