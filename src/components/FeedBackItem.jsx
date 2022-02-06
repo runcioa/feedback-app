@@ -1,12 +1,14 @@
 // src\components\FeedBackItem.jsx
 
+import Card from "./shared/Card";
+
 function FeedBackItem({ item }) {
   console.log(item);
   return (
-    <div className="card">
+    <Card>
       <div className="num-display">{item.rating}</div>
       <div className="text-diplay">{item.text}</div>
-    </div>
+    </Card>
   );
 }
 
