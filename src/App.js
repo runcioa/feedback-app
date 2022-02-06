@@ -1,6 +1,7 @@
 // src\App.js
 
 import Header from "./components/Header";
+import FeedBackItem from "./components/FeedBackItem";
 
 const App = () => {
   return (
@@ -8,7 +9,7 @@ const App = () => {
         {/* Utilizzare i props per passere le informazioni */}
       <Header />
       <div className="container">
-        <h1>My App</h1>
+        <FeedBackItem />
       </div>
     </>
   );
