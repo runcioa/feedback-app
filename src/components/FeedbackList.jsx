@@ -3,7 +3,7 @@
 import React from 'react';
 import FeedBackItem from './FeedBackItem';
 
-function FeedbackList({feedBack}) {
+function FeedbackList({feedBack, handleDelete}) {
 
   if (!feedBack || feedBack.length === 0){
     return <p>No Feedback Yet</p>
@@ -11,7 +11,7 @@ function FeedbackList({feedBack}) {
 
   return <div className='feedback-list'>
       {feedBack.map((item)=>(
-        <FeedBackItem key={item.id} item={item} />
+        <FeedBackItem key={item.id} item={item} handleDelete={handleDelete}/>
       ))}
   </div>;
 }
