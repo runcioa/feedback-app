@@ -48,7 +48,7 @@ const App = ({ handleAdd }) => {
             }></Route>
           <Route path="/about" element={<AboutPage />} />
           {/* l'url deve essere http://localhost:3000/post/200/Antonio */}
-          <Route path="/post/:id/:name" element={<Post />} />
+          <Route path="/post" element={<Post />} />
         </Routes>
         <AboutIconLink />
       </div>

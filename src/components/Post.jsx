@@ -1,17 +1,22 @@
 // src\components\Post.jsx
 
-import React from 'react';
-import {useParams} from 'react-router-dom';
+import React from "react";
+import {Navigate, useNavigate} from "react-router-dom";
 
 function Post() {
-    const params = useParams();
 
+    const navigate = useNavigate();
 
-  return <div>
-      {/* l'url deve essere http://localhost:3000/post/200/Antonio */}
-      <h1>Post {params.id}</h1>
-      <h1>Post {params.name}</h1>
-  </div>;
+    const onClick = ()=> {
+        navigate('/about');
+    }
+
+  return (
+    <div>
+      <h1>Post </h1>
+      <button onClick={onClick} >About</button>
+    </div>
+  );
 }
 
 export default Post;
