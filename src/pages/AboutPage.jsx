@@ -1,6 +1,7 @@
 // src\pages\AboutPage.jsx
 
 import React from "react";
+import { Link } from "react-router-dom";
 import Card from "../components/shared/Card";
 
 function AboutPage() {
@@ -10,7 +11,7 @@ function AboutPage() {
     <p>React app</p>
 
     <p>
-        <a href="/">Back to Home</a>
+        <Link to="/">Back to Home</Link>
     </p>
   </Card>)
 }
