@@ -4,15 +4,15 @@ import React from "react";
 import Card from "../components/shared/Card";
 
 function AboutPage() {
-  return;
+  return(
   <Card>
-    <div>About this project</div>;
+    <div>About this project</div>
     <p>React app</p>
 
     <p>
         <a href="/">Back to Home</a>
     </p>
-  </Card>;
+  </Card>)
 }
 
 export default AboutPage;
