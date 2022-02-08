@@ -12,6 +12,8 @@ import FeedbackForm from "./components/FeedbackForm";
 import AboutPage from "./pages/AboutPage";
 import AboutIconLink from "./components/AboutIconLink";
 
+import Post from "./components/Post";
+
 const App = ({ handleAdd }) => {
   const [feedback, setFeedback] = useState(FeedbackData);
 
@@ -45,6 +47,8 @@ const App = ({ handleAdd }) => {
               </>
             }></Route>
           <Route path="/about" element={<AboutPage />} />
+          {/* l'url deve essere http://localhost:3000/post/200/Antonio */}
+          <Route path="/post/:id/:name" element={<Post />} />
         </Routes>
         <AboutIconLink />
       </div>
