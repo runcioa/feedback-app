@@ -1,7 +1,10 @@
+// src\context\FeedbackContext.jsx
 import { createContext, useState } from "react";
 
+// Creo il Context
 const FeedbackContext = createContext();
 
+// Creo il provider che distribuirà il contex
 export const FeedbackProvider = ({children}) => {
 
     const [feedback, setFeedback] = useState({
@@ -17,5 +20,5 @@ export const FeedbackProvider = ({children}) => {
         </FeedbackContext.Provider>
       )
     }
-    
+
 export default FeedbackContext;
