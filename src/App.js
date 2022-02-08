@@ -12,8 +12,10 @@ import FeedbackForm from "./components/FeedbackForm";
 import AboutPage from "./pages/AboutPage";
 import AboutIconLink from "./components/AboutIconLink";
 
+import {FeedbackProvider} from "./context/FeedbackContext";
 
-const App = ({ handleAdd }) => {
+
+const App = () => {
   const [feedback, setFeedback] = useState(FeedbackData);
 
   const deleteFeedback = (id) => {
@@ -28,6 +30,7 @@ const App = ({ handleAdd }) => {
   };
 
   return (
+    <FeedbackProvider>
     <Router>
       <Header />
       <div className="container">
@@ -51,6 +54,7 @@ const App = ({ handleAdd }) => {
         <AboutIconLink />
       </div>
     </Router>
+    </FeedbackProvider>
   );
 };
 

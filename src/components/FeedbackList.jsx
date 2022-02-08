@@ -1,6 +1,5 @@
 // src\components\FeedbackList.jsx
 
-import { motion, AnimatePresence } from 'framer-motion';
 import React from 'react';
 import FeedBackItem from './FeedBackItem';
 
