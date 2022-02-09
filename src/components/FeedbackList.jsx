@@ -1,17 +1,24 @@
 // src\components\FeedbackList.jsx
 
-import React from 'react';
+//Importo il context 
+import {useContext} from 'react';
+import FeedbackContext from '../context/FeedbackContext';
+
 import FeedBackItem from './FeedBackItem';
 
-function FeedbackList({feedBack, handleDelete}) {
 
-  if (!feedBack || feedBack.length === 0){
+function FeedbackList({handleDelete}) {
+
+  // Recupero il context
+  const { feedback } = useContext(FeedbackContext);
+
+  if (!feedback || feedback.length === 0){
     return <p>No Feedback Yet</p>
   }
 
 
 return <div className='feedback-list'>
-{feedBack.map((item)=>(
+{feedback.map((item)=>(
   <FeedBackItem key={item.id} item={item} handleDelete={handleDelete}/>
 ))}
 </div>;

@@ -7,11 +7,11 @@ const FeedbackContext = createContext();
 // Creo il provider che distribuirà il contex
 export const FeedbackProvider = ({children}) => {
 
-    const [feedback, setFeedback] = useState({
+    const [feedback, setFeedback] = useState([{
         id: 1,
         text: 'this is 1 item context',
         rating: 10
-    });
+    }]);
 
     return (
         <FeedbackContext.Provider
