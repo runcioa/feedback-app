@@ -7,7 +7,7 @@ import FeedbackContext from '../context/FeedbackContext';
 import FeedBackItem from './FeedBackItem';
 
 
-function FeedbackList({handleDelete}) {
+function FeedbackList() {
 
   // Recupero il context
   const { feedback } = useContext(FeedbackContext);
@@ -19,7 +19,7 @@ function FeedbackList({handleDelete}) {
 
 return <div className='feedback-list'>
 {feedback.map((item)=>(
-  <FeedBackItem key={item.id} item={item} handleDelete={handleDelete}/>
+  <FeedBackItem key={item.id} item={item} />
 ))}
 </div>;
 }
